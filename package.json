@@ -1,0 +1,65 @@
+{
+  "name": "agraph.boilerplate.server",
+  "version": "1.0.0",
+  "description": "Apollo graphql boilerplate for backend",
+  "main": "server.js",
+  "scripts": {
+    "start:dev": "concurrently --names \"watch,server\" -c \"green.bold,gray.bold\" --kill-others-on-fail npm:build:dev npm:start:server",
+    "build:dev": "webpack --config webpack.development.js",
+    "build:prod": "webpack --config webpack.production.js",
+    "start:server": "nodemon --inspect ./dist/main.bundle.js localhost 4000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junlouiegonzales/AGRAPH.BOILERPLATE.SERVER.git"
+  },
+  "author": "Jhun Louie Gonzales",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junlouiegonzales/AGRAPH.BOILERPLATE.SERVER/issues"
+  },
+  "homepage": "https://github.com/junlouiegonzales/AGRAPH.BOILERPLATE.SERVER#readme",
+  "dependencies": {
+    "@graphql-tools/schema": "^9.0.10",
+    "apollo-server-core": "^3.11.1",
+    "apollo-server-express": "^3.11.1",
+    "express": "^4.18.2",
+    "graphql": "^16.6.0",
+    "graphql-redis-subscriptions": "^2.5.0",
+    "graphql-subscriptions": "^2.0.0",
+    "graphql-tools": "^8.3.12",
+    "graphql-upload": "^16.0.2",
+    "graphql-ws": "^5.11.2",
+    "mongoose": "^6.7.2",
+    "typescript": "^4.9.3",
+    "ws": "^8.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@types/graphql-upload": "^8.0.12",
+    "@types/node": "^18.11.9",
+    "@types/webpack-env": "^1.18.0",
+    "@types/ws": "^8.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "babel-loader": "^9.1.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "concurrently": "^7.5.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "dotenv-webpack": "^8.0.1",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1",
+    "ts-loader": "^9.4.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-merge": "^5.8.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
