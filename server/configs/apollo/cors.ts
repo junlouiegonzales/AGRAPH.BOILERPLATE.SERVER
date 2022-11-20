@@ -1,6 +1,7 @@
 import { CorsOptions } from 'cors';
 
 const allowedOrigins: string = process.env.ALLOWED_ORIGINS;
+
 const corsOpts: CorsOptions = {
   credentials: true,
   origin: (origin, callback): void => {
