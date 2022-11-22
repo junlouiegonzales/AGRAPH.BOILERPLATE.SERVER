@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/junlouiegonzales/AGRAPH.BOILERPLATE.SERVER#readme",
   "dependencies": {
+    "@graphql-tools/load-files": "^6.6.1",
     "@graphql-tools/schema": "^9.0.10",
+    "@typegoose/typegoose": "^9.12.1",
     "apollo-server-core": "^3.11.1",
     "apollo-server-express": "^3.11.1",
     "express": "^4.18.2",
@@ -34,12 +36,16 @@
     "graphql-tools": "^8.3.12",
     "graphql-upload": "^16.0.2",
     "graphql-ws": "^5.11.2",
-    "mongoose": "^6.7.2",
+    "mongoose": "^6.6.0",
     "typescript": "^4.9.3",
     "ws": "^8.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
+    "@graphql-codegen/cli": "2.13.12",
+    "@graphql-codegen/introspection": "2.2.1",
+    "@graphql-codegen/typescript": "2.8.2",
+    "@graphql-codegen/typescript-resolvers": "2.7.7",
     "@types/graphql-upload": "^8.0.12",
     "@types/node": "^18.11.9",
     "@types/webpack-env": "^1.18.0",

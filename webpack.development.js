@@ -22,11 +22,11 @@ module.exports = merge(common, {
     new CleanWebpackPlugin(),
     new Dotenv({ path: './.env.development' }),
     new webpack.HotModuleReplacementPlugin(),
-    new CopyPlugin({
-      patterns: [
-        { from: 'server/common/assets/imgs/sets', to: 'assets/imgs/sets' },
-      ],
-    }),
+    // new CopyPlugin({
+    //   patterns: [
+    //     { from: 'server/common/assets/imgs/sets', to: 'assets/imgs/sets' },
+    //   ],
+    // }),
   ],
   watch: true,
 });

@@ -3,6 +3,7 @@ import { ApolloServerExpressConfig } from 'apollo-server-express';
 import {
   ApolloServerPluginDrainHttpServer,
   ApolloServerPluginLandingPageLocalDefault,
+  ApolloServerPluginLandingPageProductionDefault,
 } from 'apollo-server-core';
 import httpServer from './http-server';
 import schema from './schema';
@@ -21,8 +22,10 @@ const config: ApolloServerExpressConfig = {
   },
   plugins: [
     ApolloServerPluginDrainHttpServer({ httpServer }),
-    ApolloServerPluginLandingPageLocalDefault({ footer: false }),
     ApolloServerPluginDrainWsServer(),
+    process.env.NODE_ENV === 'production'
+      ? ApolloServerPluginLandingPageProductionDefault()
+      : ApolloServerPluginLandingPageLocalDefault({ embed: false }),
   ],
 };
 
