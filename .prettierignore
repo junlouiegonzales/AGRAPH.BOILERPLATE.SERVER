@@ -1,3 +1,4 @@
 # Ignore all HTML files:
 *.md
 dist
+server/common/types/graphql.ts

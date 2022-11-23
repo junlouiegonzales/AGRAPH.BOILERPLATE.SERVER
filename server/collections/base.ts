@@ -1,4 +1,4 @@
-import { getModelForClass, modelOptions, prop } from '@typegoose/typegoose';
+import { prop } from '@typegoose/typegoose';
 import { Date } from 'mongoose';
 
 export class BaseEntity {
