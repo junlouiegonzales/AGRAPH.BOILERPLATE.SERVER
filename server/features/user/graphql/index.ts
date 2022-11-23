@@ -9,4 +9,8 @@ export default gql`
   type Mutation {
     addUser(firstName: String, lastName: String): User
   }
+
+  type Query {
+    getUserByParam(userId: String): User
+  }
 `;

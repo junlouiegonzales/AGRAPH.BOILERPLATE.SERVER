@@ -2,20 +2,22 @@ import { mergeResolvers, mergeTypeDefs } from '@graphql-tools/merge';
 import { loadFilesSync } from '@graphql-tools/load-files';
 import path from 'path';
 
+console.log(__dirname);
+
 export const typeDefs = mergeTypeDefs(
-  loadFilesSync(path.join('', './**/graphql/index.*'), {
+  loadFilesSync(path.join(__dirname, './**/graphql/index.*'), {
     extensions: ['ts', 'js'],
   })
 );
 
 export const queryResolvers = mergeResolvers(
-  loadFilesSync(path.join('', './**/resolvers/queries.*'), {
+  loadFilesSync(path.join(__dirname, './**/resolvers/queries.*'), {
     extensions: ['ts', 'js'],
   })
 );
 
 export const commandResolvers = mergeResolvers(
-  loadFilesSync(path.join('', './**/resolvers/mutations.*'), {
+  loadFilesSync(path.join(__dirname, './**/resolvers/mutations.*'), {
     extensions: ['ts', 'js'],
   })
 );

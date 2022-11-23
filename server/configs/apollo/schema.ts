@@ -1,5 +1,5 @@
 import { makeExecutableSchema } from '@graphql-tools/schema';
-import { GraphQLUpload } from 'graphql-upload';
+// import { GraphQLUpload } from 'graphql-upload';
 
 import {
   typeDefs,
@@ -11,9 +11,9 @@ import {
 export default makeExecutableSchema({
   typeDefs,
   resolvers: {
-    Upload: GraphQLUpload,
+    // Upload: GraphQLUpload,
     Query: queryResolvers,
     Mutation: commandResolvers,
-    // Subscription: subscriptionResolvers,
+    //Subscription: subscriptionResolvers,
   },
 });

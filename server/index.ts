@@ -1,18 +1,17 @@
 import { ApolloServer } from 'apollo-server-express';
-import apolloServerConfig from 'configs/apollo';
-import mongodbConfig from 'configs/mongoose';
-import httpServer from 'configs/apollo/http-server';
-import middleware from 'configs/apollo/middleware';
+import apolloServerConfig from './configs/apollo';
+import mongodbConfig from './configs/mongoose';
+import httpServer from './configs/apollo/http-server';
+import middleware from './configs/apollo/middleware';
 import mongoose from 'mongoose';
 // import seedCollections from 'configs/seeders';
-import wsServer from 'configs/apollo/ws-server';
+import wsServer from './configs/apollo/ws-server';
 
 (async (): Promise<void> => {
-  var x = '';
   /**
    * Database configuration
    */
-  await mongoose.connect(process.env.MONGO_URL, mongodbConfig);
+  await mongoose.connect('mongodb://localhost:27017/agraph', mongodbConfig);
   mongoose.set('debug', false);
   mongoose.connection.on('error', () => {
     throw new Error('unable to connect to database');
